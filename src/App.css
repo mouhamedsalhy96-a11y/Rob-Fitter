@@ -1,0 +1,144 @@
+:root {
+  --primary-blue: #0ea5e9;
+  --dark-blue: #0f172a;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px dashed #cbd5e1;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+  border-top: 4px solid var(--primary-blue);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prescription-card {
+  border-top-color: #10b981; /* Green for medical */
+  background-color: #ecfdf5;
+}
+
+.highlight-text {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.warning-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #991b1b;
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1px));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  margin-bottom: 0;
+}
+
+.stat-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: var(--dark-blue);
+}
+
+.coffee-card {
+  text-align: center;
+  border-top-color: #8b5a2b;
+}
+
+/* Icons */
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-small {
+  width: 24px;
+  height: 24px;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+  color: #10b981;
+}
+
+.gold { color: #eab308; }
+.grey { color: #64748b; }
+.red { color: #ef4444; }
+.blue { color: #3b82f6; }
+.brown { color: #8b5a2b; }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
